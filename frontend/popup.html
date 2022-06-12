@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <style>
+        body{
+            width: 400px;
+            height: 600px;
+            margin: 0;
+
+            /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+        }
+        h1{ color:white;
+            text-align: center;
+        }
+
+        .bn3637 {
+            margin-top: 10px;
+            margin-left: 290px;
+            margin-bottom: 30px;
+            display: inline-block;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem 2rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            text-align: center;
+            text-decoration: none;
+            backface-visibility: hidden;
+            border: 0.3rem solid transparent;
+            border-radius: 3rem;
+            color: orange;
+        }
+
+        .bn37 {
+            border-color: transparent;
+            background-color:orange ;
+            color: #000;
+            transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+        }
+
+        .bn37:hover {
+            transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+        }
+
+
+        #myInput{
+            margin-top: 10px;
+            margin-left: 22px;
+            position: absolute;
+            padding: 10px 10px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            border: 0.3rem solid transparent;
+            border-radius: 10px;
+            width: 220px;
+            height: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        ul {
+            float:left;
+            width:100%;
+            margin:2em 0;
+            padding:0;
+            position:relative;
+            margin-bottom: 100px;
+        }
+
+        ul:before {
+            content:'desserts';
+            position:absolute;
+            left:-2.8em;
+            font-size:3em;
+            text-align:right;
+            top:1.5em;
+            color:#ededed;
+            font-weight:bold;
+            font-family: 'Maven Pro', sans-serif;
+            transform:rotate(-90deg);
+        }
+
+        li {
+            float:left;
+            clear:left;
+            left: 20px;
+            width:80%;
+            margin:0.2em 0;
+            padding: 1em;
+            list-style:none;
+            background-color:#2B2B2B;
+            border-left: 10px solid #413F42;
+            cursor:pointer;
+            color:white;
+            position:relative;
+            word-wrap: break-word;
+            font-size: larger;
+        }
+
+        li:hover {
+            background-color:#ffffff;
+            border-color:#00BDE8;
+        }
+
+        html{
+            background-color:#3A3845;
+            /* background-color: rgb(226, 226, 226); */
+        }
+
+        footer{
+            margin-top: 450px;
+            padding-top: 8px;
+            position: fixed;
+            background-color: #4D4646;
+            min-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Todo <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/To_Do.svg" width="25px" height="25px"></h1>
+         <!-- add style to ul -->
+        <ul id="items"></ul>
+</body>
+<footer>
+    <input type="text" id="myInput" placeholder="Add To Do">
+    <button class="bn3637 bn37" id="link">Add</button>
+</footer>
+<script src="list.js"></script>
+</html>
